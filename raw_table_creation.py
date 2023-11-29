@@ -49,8 +49,7 @@ for field in schema_list:
       field_type=field["type"], 
       description=field["description"]
       ))
-print(schema)
+
 table_id = "appointments"
 table = bigquery.Table(dataset.table(table_id), schema=schema)
-
 table = client.create_table(table)  # Make an API request.
